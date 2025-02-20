@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ragnarok M:Classic Treasure Chests</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <button id="toggleButton" onclick="toggleMode()">Toggle Light Mode</button>
+  
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+  
+  <h2>Ragnarok M:Classic</h2>
+  <h2>Home</h2>
+  <div id="content">
+    <p> This webapp is just a compiled place for resources. I do not take full credit for anything</p>
+  </div>
+
+  <script>
+    // Load navigation from nav.html
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading nav:', error));
+
+    function toggleMode() {
+      if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        document.getElementById("toggleButton").textContent = "Toggle Dark Mode";
+      } else {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        document.getElementById("toggleButton").textContent = "Toggle Light Mode";
+      }
+    }
+  </script>
+</body>
+</html>

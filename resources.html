@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ragnarok M:Classic Resources</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <button id="toggleButton" onclick="toggleMode()">Toggle Light Mode</button>
+  
+  <!-- Navigation Placeholder -->
+  <div id="nav-placeholder"></div>
+  
+  <h1>Ragnarok M:Classic Resources</h1>
+  <div id="content">
+    <p>The following page is just random resources I find useful and lazy to put into seperate pages.</p>
+	<h2>Adventure Quest</h2>
+	<strong>Credits: [MOD] Rendang</strong>
+<p><strong>Adventurer Rank Scout Quest </strong></p>
+<ol>
+<li>Adventurer Level must be Lv5</li>
+<li>Talk to NPC at north side of Prontera to start the quest</li>
+<li>Go to Prontera West Field talk to Swordman NPC</li>
+<li>Take photo of Yoyo</li>
+<li>Talk again to Swordman NPC</li>
+<li>Beat 100 Rockers</li>
+<li>Talk again to Swordman NPC</li>
+<li>Talk to NPC at north side of Prontera to finish the quest</li>
+</ol>
+<p><strong>Adventurer Rank F Quest</strong></p>
+<ol>
+<li>Adventurer Level must be Lv10</li>
+<li>Talk to Adventure NPC at north side of Prontera to start the quest</li>
+<li>Go to Izlude Town, talk to NPC</li>
+<li>Take photo of Whispers</li>
+<li>Beat 100 Pirate Skeleton</li>
+<li>Beat 50 Skeleton</li>
+<li>Talk to Adventure NPC at north side of Prontera to finish the quest</li>
+</ol>
+<p><strong>Adventurer Rank E Quest</strong></p>
+<ol>
+<li>Adventurer Level must be Lv15</li>
+<li>Talk to Lord Knight NPC at Mt. Mjolnir</li>
+<li>Take photo of Ghostring</li>
+<li>Give NPC the following:</li>
+<ul>
+<li>5 Magic Wand Marin</li>
+<li>5 Camouflage Scroll</li>
+<li>2 Smokie Leaf</li></ul>
+<li>Talk to NPC at Mt. Mjolnir</li>
+<li>Go back to Prontera talk to Adventure NPC to finish the quest</li>
+</ol>
+<p><strong>Adventurer Rank D Quest</strong></p>
+<ol>
+<li>Adventurer Level must be Lv20</li>
+<li>Start quest at Prontera, and go to Morroc then talk to Hunter NPC</li>
+<li>Beat 50 Desert Wolf</li>
+<li>Give the Hunter NPC the following:
+<ul>
+<li>1 Emperium</li>
+<li>3 Fabric</li>
+<li>3 Four Leaf Clover</li>
+<li>10 Dead Branch</li></ul>
+<li>1 Eva (doll in toy shop)</li> </ul>
+<li>Take photo and beat Osiris</li>
+<li>Talk to Hunter NPC</li>
+<li>Go to Adventure NPC at north side of Prontera to finish</li>
+</ol>
+<p><strong>Adventurer Rank C Quest</strong></p>
+<ol>
+<li>Adventurer Level must be Lv25</li>
+<li>Have Certificate of tutor from Gadar Quest</li>
+<li>Start quest at Adventure NPC at north side of Prontera</li>
+<li>Go to Payon and talk to Sniper NPC</li>
+<li>Must have at least 1M zeny to show to him</li>
+<li>Follow the quest tracker</li>
+<li>Submit 1000 Evil Horns at Prontera NPC Near Church</li>
+<li>Beat Doppelganger and get his soul</li>
+<li>Clear Endless Tower level 70+</li>
+<li>Go back to Payon South Field and give NPC the following:
+<ul>
+<li>1 Orc Nail</li>
+<li>1 Antenna</li>
+<li>1 Dragon Scale</li>
+<li>500 Necklace of Wisdom</li></ul>
+<li>Go back to Payon Town talk to Hunter NPC to finish</li>
+</ol>
+<p><strong>Adventurer Rank B Quest</strong></p>
+<ol>
+<li>Adventurer Level must be Lv30</li>
+<li>Quest starts at Payon, talk to Hunter NPC</li>
+<li>Give the NPC 1 Biotite</li>
+<li>Go to Prontera, give Adventure NPC 1 Pearl</li>
+<li>Go to Clock Tower 1F, talk to NPC, follow, then kill SinX</li>
+<li>Follow the quest tracker</li>
+<li>Go back to Payon, give NPC 1 Button of Time</li>
+<li>Talk again to finish</li>
+</ol>
+	
+	<h2>Elements</h2> 
+	<img src="img/element_mobs.png"> 
+	<img src="img/element_table.png"> 
+
+	<h2>Refine</h2> 
+	<img src="img/refine_safe_value.png"> 
+	<img src="img/element_table.png"> 
+	
+
+
+  </div>
+
+  <script>
+    // Load navigation from nav.html
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading nav:', error));
+
+    function toggleMode() {
+      if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        document.getElementById("toggleButton").textContent = "Toggle Dark Mode";
+      } else {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        document.getElementById("toggleButton").textContent = "Toggle Light Mode";
+      }
+    }
+  </script>
+</body>
+</html>
